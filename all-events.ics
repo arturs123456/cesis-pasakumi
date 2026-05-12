@@ -1,0 +1,369 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cēsu Pasākumi 2026//LV
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Cēsu Pasākumi 2026
+X-WR-CALDESC:Pasākumi Cēsīs, Cēsu pilsētā un Cēsu novadā
+X-WR-TIMEZONE:Europe/Riga
+BEGIN:VEVENT
+UID:2026-05-04-valsts-sv-tku-koncerts@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260504
+SUMMARY:Valsts svētku koncerts
+LOCATION:Vienības laukums\, Cēsis
+DESCRIPTION:Latvijas Republikas Neatkarības atjaunošanas dienai veltīts koncerts ar Cēsu kolektīviem un viesiem.\n\nBiļetes: https://pasakumi.cesis.lv/
+URL:https://pasakumi.cesis.lv/
+CATEGORIES:tradicija
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-05-10-motosezonas-atkl--ana---ier-cin-m-c-sis@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260510
+SUMMARY:Motosezonas atklāšana — Ierūcinām Cēsis
+LOCATION:Pils parks\, Cēsis
+DESCRIPTION:Motociklistu sezonas oficiālā atklāšana ar parādi cauri pilsētai un brīvdabas koncertu.\n\nBiļetes: https://pasakumi.cesis.lv/
+URL:https://pasakumi.cesis.lv/
+CATEGORIES:tradicija
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-05-13-b-da-me-----jaunie-u-izr-de@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260513
+SUMMARY:Būda mežā — jauniešu izrāde
+LOCATION:Vidzemes Koncertzāle Cēsis
+DESCRIPTION:Jauniešu teātra studijas izrāde. Izrādes notiek 13.–17. maijā vairākos seansos.\n\nBiļetes: https://www.bilesuserviss.lv/lat/promoters-and-salespoints/norisesvietas/vidzemes-koncertzale-cesis-3785/
+URL:https://www.bilesuserviss.lv/lat/promoters-and-salespoints/norisesvietas/vidzemes-koncertzale-cesis-3785/
+CATEGORIES:teatris
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-05-16-andreja-osokina-klavierm-zikas-kods@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260516
+SUMMARY:Andreja Osokina klaviermūzikas kods
+LOCATION:Radošais kvartāls Zeit\, Līgatne
+DESCRIPTION:Pianista Andreja Osokina solo koncerts ar klaviermūzikas šedevriem.\n\nBiļetes: https://www.bilesuparadize.lv/
+URL:https://www.bilesuparadize.lv/
+CATEGORIES:muzika
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-05-16-bazn-cu-nakts-2026@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260516
+SUMMARY:Baznīcu nakts 2026
+LOCATION:Cēsu novada baznīcas
+DESCRIPTION:Ikgadējais Baznīcu nakts pasākums — koncerti\, ekskursijas un sarunas Cēsu novada dievnamos.\n\nBiļetes: https://baznicunakts.lv/
+URL:https://baznicunakts.lv/
+CATEGORIES:tradicija
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-05-16-deju-pinu-vainag----tautas-deju-koncerts@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260516
+SUMMARY:Deju pinu vainagā — tautas deju koncerts
+LOCATION:Vidzemes Koncertzāle Cēsis
+DESCRIPTION:Tautas deju koncerts ar Cēsu novada deju kolektīviem.\n\nBiļetes: https://www.bilesuserviss.lv/lat/promoters-and-salespoints/norisesvietas/vidzemes-koncertzale-cesis-3785/
+URL:https://www.bilesuserviss.lv/lat/promoters-and-salespoints/norisesvietas/vidzemes-koncertzale-cesis-3785/
+CATEGORIES:tradicija
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-05-22-za-umballe-ar-grupu-zelta-kniede@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260522
+SUMMARY:Zaļumballe ar grupu Zelta Kniede
+LOCATION:Cēsis
+DESCRIPTION:Tradicionālā zaļumballe ar dzīvo mūziku un dejām zem klajas debess.\n\nBiļetes: https://www.bilesuserviss.lv/lat/biletes/muzika/
+URL:https://www.bilesuserviss.lv/lat/biletes/muzika/
+CATEGORIES:muzika
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-05-23-muzeju-nakts-2026@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260523
+SUMMARY:Muzeju nakts 2026
+LOCATION:Cēsu novada muzeji
+DESCRIPTION:Ikgadējais Muzeju nakts pasākums — vēlīnās ekskursijas\, izstādes un programmas Cēsu\, Liepas\, Vecpiebalgas un citu novada muzeju krātuvēs.\n\nBiļetes: https://muzejunakts.lv/
+URL:https://muzejunakts.lv/
+CATEGORIES:maksla
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-05-23-c-su-st-du-sv-tki@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260523
+SUMMARY:Cēsu Stādu svētki
+LOCATION:Cēsu tirgus
+DESCRIPTION:Pavasara stādu\, dārza preču\, mājražojumu un kulinārijas tirgus.\n\nBiļetes: https://pasakumi.cesis.lv/
+URL:https://pasakumi.cesis.lv/
+CATEGORIES:tirgus
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-05-30-b-rnu-un-jaunie-u-m-kslas-festiv-ls@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260530
+SUMMARY:Bērnu un jauniešu mākslas festivāls
+LOCATION:Rožu laukums\, Cēsis
+DESCRIPTION:Brīvdabas festivāls ģimenēm — radošās darbnīcas\, priekšnesumi\, izstādes\, sacensības.\n\nBiļetes: https://pasakumi.cesis.lv/
+URL:https://pasakumi.cesis.lv/
+CATEGORIES:berniem
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-05-31-r-gas-iela---vasaras-g-j-ju-iela--atkl--ana-@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260531
+SUMMARY:Rīgas iela — vasaras gājēju iela (atklāšana)
+LOCATION:Rīgas iela\, Cēsis
+DESCRIPTION:Rīgas iela kļūst par gājēju ielu līdz 30. augustam — kafejnīcas\, ielu mākslinieki un brīvdabas atmosfēra.\n\nBiļetes: https://visit.cesis.lv/
+URL:https://visit.cesis.lv/
+CATEGORIES:tradicija
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-06-06-latvijas-sievie-u-un-v-ru-koru-salidojums@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260606
+SUMMARY:Latvijas sieviešu un vīru koru salidojums
+LOCATION:Pils parks\, Cēsis
+DESCRIPTION:Latvijas sieviešu un vīru koru salidojuma noslēguma koncerts Pils parkā.\n\nBiļetes: https://www.bilesuserviss.lv/lat/biletes/muzika/
+URL:https://www.bilesuserviss.lv/lat/biletes/muzika/
+CATEGORIES:muzika
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-06-07-bermudu-divst-ris---koncerts@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260607
+SUMMARY:BERMUDU DIVSTŪRIS — koncerts
+LOCATION:Radošais kvartāls Zeit\, Līgatne
+DESCRIPTION:Latvijas leģendārās grupas BERMUDU DIVSTŪRIS koncerts atmosfēriskajā Zeit kvartālā.\n\nBiļetes: https://www.bilesuparadize.lv/
+URL:https://www.bilesuparadize.lv/
+CATEGORIES:muzika
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-06-07-vaives-pagasta-sv-tki@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260607
+SUMMARY:Vaives pagasta svētki
+LOCATION:Kaķukrogs\, Vaives pagasts
+DESCRIPTION:Tradicionālie Vaives pagasta svētki ar koncertu\, sportu un ballēm.\n\nBiļetes: https://pasakumi.cesis.lv/
+URL:https://pasakumi.cesis.lv/
+CATEGORIES:tradicija
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-06-13-alus-festiv-ls-c-sis-2026@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260613
+SUMMARY:Alus festivāls Cēsis 2026
+LOCATION:Pils laukums\, Cēsis
+DESCRIPTION:Latvijas amatnieku alus festivāls — degustācijas\, ēdiens\, dzīvā mūzika.\n\nBiļetes: https://visit.cesis.lv/
+URL:https://visit.cesis.lv/
+CATEGORIES:festivals
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-06-13-gnc-carfest---sp-kratu-un-lidojumu-festiv-ls@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260613
+SUMMARY:GNC CARFEST — Spēkratu un lidojumu festivāls
+LOCATION:Cēsu vecais lidlauks
+DESCRIPTION:Spēkratu\, lidojumu un mūzikas festivāls ar demonstrācijām\, izstādēm un koncertiem.\n\nBiļetes: https://www.bilesuparadize.lv/
+URL:https://www.bilesuparadize.lv/
+CATEGORIES:festivals
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-06-16-starptautiskais--aha-festiv-ls-c-sis@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260616
+SUMMARY:Starptautiskais šaha festivāls Cēsis
+LOCATION:Cēsis
+DESCRIPTION:16.–21. jūnijs · daudzu nāciju šaha turnīrs ar dažādu līmeņu spēlētājiem.\n\nBiļetes: https://pasakumi.cesis.lv/
+URL:https://pasakumi.cesis.lv/
+CATEGORIES:sports
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-06-20-z--u-tirgus-un-deju-uzvedums@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260620
+SUMMARY:Zāļu tirgus un deju uzvedums
+LOCATION:Rožu laukums / Pils parks
+DESCRIPTION:Tradicionālais Jāņu zāļu tirgus un Līgo deju uzvedums.\n\nBiļetes: https://pasakumi.cesis.lv/
+URL:https://pasakumi.cesis.lv/
+CATEGORIES:tirgus
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-06-21-saulgrie-u-svin--ana@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260621
+SUMMARY:Saulgriežu svinēšana
+LOCATION:Zanderu kalns\, Līgatne
+DESCRIPTION:Tradicionālā saulgriežu nakts ar uguns ritu\, dziesmām un dejām.\n\nBiļetes: https://pasakumi.cesis.lv/
+URL:https://pasakumi.cesis.lv/
+CATEGORIES:tradicija
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-06-27-festiv-ls-saulesbass-2026@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260627
+SUMMARY:Festivāls SaulesBASS 2026
+LOCATION:Mākslas telpa MALA\, Cēsis
+DESCRIPTION:Alternatīvās un elektroniskās mūzikas festivāls ar Latvijas un ārzemju māksliniekiem.\n\nBiļetes: https://www.bilesuparadize.lv/
+URL:https://www.bilesuparadize.lv/
+CATEGORIES:festivals
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-07-03-hiphopa-festiv-ls-straume@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260703
+SUMMARY:Hiphopa festivāls Straume
+LOCATION:Radošais kvartāls Zeit\, Līgatne
+DESCRIPTION:3.–4. jūlijs · Latvijas hiphopa festivāls ar lielāko žanra mākslinieku piedalīšanos.\n\nBiļetes: https://www.straumefest.lv/
+URL:https://www.straumefest.lv/
+CATEGORIES:festivals
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-07-10-sarunu-festiv-ls-lampa-2026@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260710
+SUMMARY:Sarunu festivāls Lampa 2026
+LOCATION:Cēsu pils parks
+DESCRIPTION:10.–11. jūlijs · sabiedrisko sarunu festivāls. 2026. gada tēma — “Par ko nedrīkst nerunāt?”.\n\nBiļetes: https://festivalslampa.lv/lv/sakums
+URL:https://festivalslampa.lv/lv/sakums
+CATEGORIES:festivals
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-07-10-p-rgaujas-sv-tki---straupei-820@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260710
+SUMMARY:Pārgaujas svētki — Straupei 820
+LOCATION:Straupe
+DESCRIPTION:10.–12. jūlijs · Straupes 820 gadu jubilejas svētki.\n\nBiļetes: https://pasakumi.cesis.lv/
+URL:https://pasakumi.cesis.lv/
+CATEGORIES:tradicija
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-07-17-c-su-pils-tas-sv-tki---c-s-m-820@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260717
+SUMMARY:Cēsu pilsētas svētki — Cēsīm 820
+LOCATION:Cēsu pils parks un pilsētas centrs
+DESCRIPTION:17.–18. jūlijs · Cēsu 820. gadu jubilejas svētki — koncerti Pils parkā\, Hanzas tirgus\, Fono Cēsis rokfestivāls\, gājiens ar lāpām.\n\nBiļetes: https://www.eventpartner.lv/lv/kalendars/cesu-svetki
+URL:https://www.eventpartner.lv/lv/kalendars/cesu-svetki
+CATEGORIES:tradicija
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-07-17-hanzas-tirgus@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260717
+SUMMARY:Hanzas tirgus
+LOCATION:Pils dārzs\, Cēsis
+DESCRIPTION:Viduslaiku amatniecības un ēdienu tirgus Cēsīm 820 ietvaros\, Pils dārzā.\n\nBiļetes: https://pasakumi.cesis.lv/pasakums/hanzas-tirgus/
+URL:https://pasakumi.cesis.lv/pasakums/hanzas-tirgus/
+CATEGORIES:tirgus
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-07-17-fono-c-sis-rokfestiv-ls@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260717
+SUMMARY:Fono Cēsis rokfestivāls
+LOCATION:Cēsu pils parks
+DESCRIPTION:Rokfestivāls Cēsīm 820 ietvaros — Latvijas un Baltijas rokgrupas.\n\nBiļetes: https://www.eventpartner.lv/lv/kalendars/cesu-svetki
+URL:https://www.eventpartner.lv/lv/kalendars/cesu-svetki
+CATEGORIES:festivals
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-07-17-festiv-ls-laba-daba-2026@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260717
+SUMMARY:Festivāls LABA DABA 2026
+LOCATION:Ratnieki\, Līgatnes pagasts
+DESCRIPTION:17.–19. jūlijs · starptautiskais mūzikas un mākslas festivāls. 15. reize. Bērni līdz 13 gadiem — bez maksas\, kemperu vietas iekļautas.\n\nBiļetes: https://www.labadaba.lv/biletes
+URL:https://www.labadaba.lv/biletes
+CATEGORIES:festivals
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-07-19-latvijas-v-ndaru-sv-tki@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260719
+SUMMARY:Latvijas Vīndaru svētki
+LOCATION:Straupes Zirgu pasts
+DESCRIPTION:Latvijas mājražoto vīnu un košļātavu festivāls — degustācijas\, sarunas\, mūzika.\n\nBiļetes: https://pasakumi.cesis.lv/
+URL:https://pasakumi.cesis.lv/
+CATEGORIES:tirgus
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-07-24-vecpiebalga-atver-durvis@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260724
+SUMMARY:Vecpiebalga atver durvis
+LOCATION:Vecpiebalga
+DESCRIPTION:24.–25. jūlijs · atvērto durvju dienas Vecpiebalgas pagastā — saimniecības\, muzeji\, darbnīcas.\n\nBiļetes: https://pasakumi.cesis.lv/
+URL:https://pasakumi.cesis.lv/
+CATEGORIES:tradicija
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-07-25-imantdienas---imanta-ziedo-a-jubileja@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260725
+SUMMARY:Imantdienas — Imanta Ziedoņa jubileja
+LOCATION:Pils parks\, Cēsis
+DESCRIPTION:Dzejnieka Imanta Ziedoņa jubilejai veltīts kultūras pasākums — koncerts\, dzejas lasījumi.\n\nBiļetes: https://www.bilesuparadize.lv/lv/event/154454
+URL:https://www.bilesuparadize.lv/lv/event/154454
+CATEGORIES:maksla
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-07-25-marokas-gar-u-festiv-ls@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260725
+SUMMARY:Marokas garšu festivāls
+LOCATION:Rakši Zoo\, Cēsu novads
+DESCRIPTION:25.–26. jūlijs · Marokas kultūras\, garšu un mūzikas festivāls Rakši Zoo teritorijā.\n\nBiļetes: https://pasakumi.cesis.lv/
+URL:https://pasakumi.cesis.lv/
+CATEGORIES:festivals
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-08-01-gauja-trail-utmb-2026@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260801
+SUMMARY:Gauja Trail UTMB 2026
+LOCATION:Cēsis\, Līgatne (finišs: Rožu laukums)
+DESCRIPTION:1.–2. augusts · starptautisks taku skriešanas maratons UTMB sērijas ietvaros.\n\nBiļetes: https://gauja.utmb.world/lv
+URL:https://gauja.utmb.world/lv
+CATEGORIES:sports
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-08-01-m-jas-kafejn-cu-dienas-c-su-novad-@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260801
+SUMMARY:Mājas kafejnīcu dienas Cēsu novadā
+LOCATION:Visā Cēsu novadā
+DESCRIPTION:1.–2. augusts · mājražotāju un saimniecību kafejnīcu maršruts.\n\nBiļetes: https://majaskafejnicas.lv/
+URL:https://majaskafejnicas.lv/
+CATEGORIES:tirgus
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-08-02-maksims-galkins---jubilejas-t-re@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260802
+SUMMARY:Maksims Galkins — Jubilejas tūre
+LOCATION:Vidzemes Koncertzāle Cēsis
+DESCRIPTION:Maksima Galkina jubilejas koncerts.\n\nBiļetes: https://www.bilesuserviss.lv/lat/promoters-and-salespoints/norisesvietas/vidzemes-koncertzale-cesis-3785/
+URL:https://www.bilesuserviss.lv/lat/promoters-and-salespoints/norisesvietas/vidzemes-koncertzale-cesis-3785/
+CATEGORIES:muzika
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-08-08-pap-rfabrikas-festiv-ls@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260808
+SUMMARY:Papīrfabrikas festivāls
+LOCATION:Līgatnes Papīrfabrika
+DESCRIPTION:Industriālā mantojuma festivāls Līgatnes vēsturiskajā papīrfabrikā.\n\nBiļetes: https://www.facebook.com/papirfabrikasfestivals/
+URL:https://www.facebook.com/papirfabrikasfestivals/
+CATEGORIES:festivals
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-08-08-c-su-sporta-festiv-ls-un-ghetto-games@cesis-pasakumi
+DTSTAMP:20260512T093757Z
+DTSTART;VALUE=DATE:20260808
+SUMMARY:Cēsu Sporta festivāls un Ghetto Games
+LOCATION:Cēsis
+DESCRIPTION:Ielas sporta sacensības un demonstrācijas — basketbols\, BMX\, skeitbords.\n\nBiļetes: https://pasakumi.cesis.lv/
+URL:https://pasakumi.cesis.lv/
+CATEGORIES:sports
+END:VEVENT
+END:VCALENDAR
