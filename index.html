@@ -545,6 +545,44 @@
     .empty { text-align: center; padding: 80px 24px; color: var(--ink-mute); }
     .empty h3 { font-family: 'Fraunces', serif; font-size: 24px; margin-bottom: 8px; color: var(--ink); }
 
+    /* UPCOMING BANNER */
+    .upcoming-banner {
+      background: linear-gradient(135deg, var(--accent-soft) 0%, var(--bg-soft) 100%);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 22px;
+      margin-bottom: 32px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    [data-theme="dark"] .upcoming-banner {
+      background: linear-gradient(135deg, var(--accent-soft) 0%, var(--bg-soft) 100%);
+    }
+    .upcoming-banner .ub-icon { font-size: 28px; }
+    .upcoming-banner .ub-text { flex: 1; min-width: 200px; }
+    .upcoming-banner .ub-title { font-family:'Fraunces', serif; font-size: 18px; font-weight: 700; margin-bottom: 2px; }
+    .upcoming-banner .ub-sub { font-size: 13px; color: var(--ink-soft); }
+    .upcoming-banner .ub-list { display: flex; gap: 8px; flex-wrap: wrap; }
+    .upcoming-banner .ub-event {
+      padding: 6px 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .15s;
+      color: var(--ink);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .upcoming-banner .ub-event:hover { border-color: var(--accent); color: var(--accent); }
+    .upcoming-banner .ub-event .ub-when { font-weight: 700; color: var(--accent); }
+
     /* TOAST */
     .toast {
       position: fixed; bottom: 20px; left: 50%;
@@ -644,6 +682,8 @@
   </div>
 
   <div class="months" id="monthTabs"></div>
+
+  <div id="upcoming"></div>
 
   <div id="results"></div>
 
@@ -790,6 +830,10 @@ function eventId(e) {
   return `${e.date}-${e.title}`.replace(/[^a-z0-9]/gi, "-").toLowerCase();
 }
 
+function mapsUrl(location) {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location + ", Cēsu novads, Latvija")}`;
+}
+
 function filtered() {
   let list = EVENTS.slice();
   if (state.search.trim()) {
@@ -890,12 +934,85 @@ function render() {
 
   renderChips();
   renderMonthTabs();
+  renderUpcoming();
 
   document.getElementById("viewList").classList.toggle("active", state.view === "list");
   document.getElementById("viewCalendar").classList.toggle("active", state.view === "calendar");
 
   if (state.view === "list") renderList();
   else renderCalendar();
+}
+
+function renderUpcoming() {
+  const wrap = document.getElementById("upcoming");
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+  const weekEnd = new Date(now);
+  weekEnd.setDate(weekEnd.getDate() + 7);
+
+  const upcoming = EVENTS.filter(e => {
+    const d = new Date(e.date + "T00:00:00");
+    return d >= now && d < weekEnd;
+  }).sort((a, b) => a.date.localeCompare(b.date)).slice(0, 5);
+
+  if (!upcoming.length || state.search || state.category !== "all" || state.month !== "all" || state.favOnly) {
+    wrap.innerHTML = "";
+    return;
+  }
+
+  wrap.innerHTML = `
+    <div class="upcoming-banner">
+      <div class="ub-icon">🔥</div>
+      <div class="ub-text">
+        <div class="ub-title">Tuvākajā nedēļā</div>
+        <div class="ub-sub">${upcoming.length} pasākum${upcoming.length === 1 ? "s" : "i"} nākamajās 7 dienās</div>
+      </div>
+      <div class="ub-list">
+        ${upcoming.map(e => {
+          const d = fmtDate(e.date);
+          return `<a class="ub-event" href="#" data-id="${eventId(e)}"><span class="ub-when">${d.day}.${String(d.monthIdx + 1).padStart(2, "0")}</span> ${e.title.length > 32 ? e.title.substring(0, 32) + "…" : e.title}</a>`;
+        }).join("")}
+      </div>
+    </div>`;
+
+  wrap.querySelectorAll(".ub-event").forEach(el => {
+    el.addEventListener("click", (ev) => {
+      ev.preventDefault();
+      openModal(el.dataset.id);
+    });
+  });
+}
+
+function injectJsonLd() {
+  const ld = EVENTS.map(e => {
+    const d = fmtDate(e.date);
+    const isFree = /bez maksas|free/i.test(e.price);
+    const obj = {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": e.title,
+      "startDate": e.date,
+      "description": e.info || "",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": e.location,
+        "address": { "@type": "PostalAddress", "addressRegion": "Cēsu novads", "addressCountry": "LV" }
+      },
+      "url": e.ticketUrl,
+    };
+    if (isFree) {
+      obj.offers = { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "url": e.ticketUrl, "availability": "https://schema.org/InStock" };
+    } else if (e.ticketProvider) {
+      obj.offers = { "@type": "Offer", "url": e.ticketUrl, "availability": "https://schema.org/InStock", "priceCurrency": "EUR" };
+    }
+    return obj;
+  });
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.textContent = JSON.stringify(ld);
+  document.head.appendChild(script);
 }
 
 function renderList() {
@@ -965,7 +1082,7 @@ function cardHTML(e) {
         <div class="tags"><span class="tag ${e.category}">${cat.icon} ${cat.label}</span></div>
         <h3>${e.title}</h3>
         <div class="meta">
-          <span>📍 ${e.location}</span>
+          <span>📍 ${e.location} <a href="${mapsUrl(e.location)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="color:var(--accent); text-decoration:none; margin-left:2px;" title="Atvērt kartē">↗</a></span>
           ${e.info ? `<span style="opacity:.75; flex-basis: 100%; margin-top: 2px;">${e.info.substring(0, 110)}${e.info.length > 110 ? "…" : ""}</span>` : ""}
         </div>
         <div class="card-foot">
@@ -1139,7 +1256,7 @@ function openModal(id) {
   const modal = document.getElementById("modal");
   document.getElementById("modalTitle").textContent = e.title;
   document.getElementById("modalDate").textContent = `${d.day}. ${d.monthFull.toLowerCase()} ${d.year} (${d.dow})`;
-  document.getElementById("modalLocation").innerHTML = `<strong>${e.location}</strong>`;
+  document.getElementById("modalLocation").innerHTML = `<strong>${e.location}</strong><br><a href="${mapsUrl(e.location)}" target="_blank" rel="noopener" style="font-size:13px; color:var(--accent); text-decoration:none;">↗ Atvērt Google Maps</a>`;
   const price = document.getElementById("modalPrice");
   const provider = providerLabel(e.ticketProvider);
   price.innerHTML = `<strong>${e.price}</strong>${provider ? `<br><span style="font-size:13px; color:var(--ink-mute);">via ${provider}</span>` : ""}`;
@@ -1234,6 +1351,7 @@ document.addEventListener("keydown", (e) => {
 
 // ===== INIT =====
 applyTheme();
+injectJsonLd();
 render();
 </script>
 
