@@ -1,0 +1,1241 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cēsu Pasākumi 2026 — Katalogs</title>
+  <meta name="description" content="Visi pasākumi Cēsīs, Cēsu pilsētā un Cēsu novadā. Koncerti, festivāli, tradīcijas, sports. Biļetes — Biļešu Serviss un Biļešu Paradīze." />
+  <meta property="og:title" content="Cēsu Pasākumi 2026" />
+  <meta property="og:description" content="Pilns Cēsu un Cēsu novada pasākumu katalogs ar biļešu saitēm." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎟️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fbf7f1;
+      --bg-card: #ffffff;
+      --bg-soft: #f4ede0;
+      --ink: #1a1a1a;
+      --ink-soft: #555;
+      --ink-mute: #888;
+      --accent: #b8442a;
+      --accent-deep: #8e2f1d;
+      --accent-soft: #f3d9c8;
+      --line: #e8e1d4;
+      --line-strong: #d8cdb8;
+      --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px -8px rgba(0,0,0,.08);
+      --shadow-lg: 0 20px 60px -20px rgba(0,0,0,.25);
+    }
+
+    [data-theme="dark"] {
+      --bg: #14110d;
+      --bg-card: #1f1b15;
+      --bg-soft: #2a2419;
+      --ink: #f5ecdc;
+      --ink-soft: #c3b8a3;
+      --ink-mute: #8e8473;
+      --accent: #e87a55;
+      --accent-deep: #f8c89a;
+      --accent-soft: #3a201a;
+      --line: #3a322a;
+      --line-strong: #4a4036;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -8px rgba(0,0,0,.5);
+      --shadow-lg: 0 20px 60px -20px rgba(0,0,0,.7);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      transition: background .25s, color .25s;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* HERO */
+    header.hero {
+      background: linear-gradient(160deg, #2b1810 0%, #5a2d1c 60%, #b8442a 100%);
+      color: #fbf7f1;
+      padding: 64px 0 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    header.hero::before {
+      content: ""; position: absolute; inset: 0;
+      background-image: radial-gradient(circle at 80% 30%, rgba(255,200,150,.15), transparent 60%);
+      pointer-events: none;
+    }
+    .hero-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+    .eyebrow { font-size: 13px; letter-spacing: .25em; text-transform: uppercase; opacity: .75; margin-bottom: 16px; }
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 900;
+      font-size: clamp(40px, 6vw, 76px);
+      line-height: .95;
+      letter-spacing: -.02em;
+      margin-bottom: 16px;
+    }
+    h1 em { font-style: italic; color: #f8c89a; font-weight: 500; }
+    .hero-sub { max-width: 620px; font-size: 17px; opacity: .85; line-height: 1.55; }
+    .hero-stats { display: flex; gap: 32px; margin-top: 32px; flex-wrap: wrap; }
+    .stat .num { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 700; color: #f8c89a; }
+    .stat .lbl { font-size: 13px; opacity: .7; text-transform: uppercase; letter-spacing: .1em; }
+
+    .theme-toggle {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+      color: #fff;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background .15s, transform .2s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .theme-toggle:hover { background: rgba(255,255,255,.2); transform: rotate(20deg); }
+
+    /* CONTROLS */
+    .controls {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+      margin: -28px auto 32px;
+      max-width: 1152px;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 12px;
+      z-index: 50;
+    }
+    .controls-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .search { flex: 1 1 240px; position: relative; }
+    .search input {
+      width: 100%;
+      padding: 11px 14px 11px 40px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: inherit;
+      background: var(--bg);
+      color: var(--ink);
+      transition: border-color .15s, background .15s;
+    }
+    .search input:focus { outline: none; border-color: var(--accent); }
+    .search svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: var(--ink-mute); }
+
+    select, .btn {
+      padding: 11px 14px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: inherit;
+      background: var(--bg);
+      color: var(--ink);
+      cursor: pointer;
+      transition: all .15s;
+    }
+    select:hover, .btn:hover { border-color: var(--line-strong); }
+    .btn.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+    .view-toggle {
+      display: inline-flex;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 2px;
+    }
+    .view-toggle button {
+      padding: 8px 14px;
+      border: none;
+      background: transparent;
+      color: var(--ink-soft);
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: all .15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .view-toggle button.active { background: var(--ink); color: var(--bg); }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--line);
+    }
+    .chip {
+      padding: 7px 14px;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      border-radius: 999px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all .15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: inherit;
+      color: var(--ink-soft);
+    }
+    .chip:hover { border-color: var(--line-strong); color: var(--ink); }
+    .chip.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+    .chip .count { font-size: 11px; opacity: .6; }
+    .chip.active .count { opacity: .8; }
+
+    /* MONTH TABS */
+    .months {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 24px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .month-tab {
+      padding: 10px 18px;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--ink-mute);
+      font-family: inherit;
+      white-space: nowrap;
+      transition: all .15s;
+    }
+    .month-tab:hover { color: var(--ink); }
+    .month-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* LIST VIEW */
+    .month-group { margin-bottom: 48px; scroll-margin-top: 120px; }
+    .month-head {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .month-head h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -.01em;
+    }
+    .month-head .count { color: var(--ink-mute); font-size: 14px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      gap: 16px;
+      transition: transform .15s, box-shadow .15s, border-color .15s;
+      position: relative;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: var(--line-strong);
+    }
+    .date-badge {
+      flex-shrink: 0;
+      width: 60px;
+      text-align: center;
+      padding: 10px 6px;
+      background: var(--bg);
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      align-self: flex-start;
+    }
+    .date-badge .month { font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+    .date-badge .day { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 700; line-height: 1; margin: 4px 0 2px; }
+    .date-badge .dow { font-size: 10px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .1em; }
+
+    .card-body { flex: 1; min-width: 0; }
+    .card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 8px;
+      letter-spacing: -.01em;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      font-size: 13px;
+      color: var(--ink-soft);
+      margin-bottom: 12px;
+    }
+    .meta span { display: inline-flex; align-items: center; gap: 4px; }
+
+    .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+    .tag {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+    .tag.muzika   { background: #fde2d4; color: #9c3a18; }
+    .tag.festivals{ background: #e8dcfa; color: #5e3aa3; }
+    .tag.tradicija{ background: #d9ead7; color: #3d6936; }
+    .tag.sports   { background: #d4ecf5; color: #2a6b85; }
+    .tag.maksla   { background: #fae8c3; color: #7a5414; }
+    .tag.tirgus   { background: #f5d4d4; color: #8c2e2e; }
+    .tag.berniem  { background: #fce5ec; color: #a3326b; }
+    .tag.teatris  { background: #ddd8c8; color: #5a4f2c; }
+    [data-theme="dark"] .tag.muzika   { background: rgba(232,122,85,.2); color: #f5a585; }
+    [data-theme="dark"] .tag.festivals{ background: rgba(148,113,200,.2); color: #c5a3ee; }
+    [data-theme="dark"] .tag.tradicija{ background: rgba(120,170,110,.2); color: #a3d49b; }
+    [data-theme="dark"] .tag.sports   { background: rgba(95,165,200,.2); color: #8ec5e0; }
+    [data-theme="dark"] .tag.maksla   { background: rgba(220,170,80,.2); color: #f0c870; }
+    [data-theme="dark"] .tag.tirgus   { background: rgba(200,100,100,.2); color: #f08a8a; }
+    [data-theme="dark"] .tag.berniem  { background: rgba(220,120,160,.2); color: #f0a8c4; }
+    [data-theme="dark"] .tag.teatris  { background: rgba(180,160,120,.2); color: #d4c498; }
+
+    .card-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .price { font-size: 13px; color: var(--ink-soft); font-weight: 500; }
+    .price strong { color: var(--ink); }
+    .price.free strong { color: #3d6936; }
+    [data-theme="dark"] .price.free strong { color: #a3d49b; }
+
+    .ticket-btn {
+      padding: 8px 14px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background .15s, transform .15s;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .ticket-btn:hover { background: var(--accent-deep); transform: translateY(-1px); }
+    .ticket-btn.secondary { background: var(--ink); color: var(--bg); }
+    .ticket-btn.secondary:hover { background: var(--ink-soft); }
+    .ticket-btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+    .ticket-btn.ghost:hover { background: var(--accent-soft); }
+    [data-theme="dark"] .ticket-btn { color: #14110d; }
+    [data-theme="dark"] .ticket-btn.ghost { color: var(--accent); background: transparent; }
+
+    .fav {
+      position: absolute;
+      top: 14px; right: 14px;
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--bg-card);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-mute);
+      transition: all .15s;
+      font-size: 16px;
+      z-index: 2;
+    }
+    .fav:hover { color: var(--accent); border-color: var(--accent); transform: scale(1.1); }
+    .fav.active { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+
+    /* CALENDAR VIEW */
+    .calendar { background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; margin-bottom: 32px; }
+    .calendar-head {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;
+    }
+    .calendar-head h2 { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 700; }
+    .calendar-nav { display: flex; gap: 4px; }
+    .calendar-nav button {
+      width: 36px; height: 36px; border: 1px solid var(--line);
+      background: var(--bg); border-radius: 8px; cursor: pointer;
+      color: var(--ink); font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      transition: all .15s; font-family: inherit;
+    }
+    .calendar-nav button:hover { border-color: var(--accent); color: var(--accent); }
+
+    .cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 2px;
+      background: var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .cal-dow {
+      background: var(--bg-soft);
+      padding: 10px;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--ink-mute);
+    }
+    .cal-day {
+      background: var(--bg-card);
+      min-height: 90px;
+      padding: 6px 8px;
+      cursor: pointer;
+      transition: background .15s;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .cal-day:hover { background: var(--bg-soft); }
+    .cal-day.empty { background: var(--bg); opacity: .3; cursor: default; }
+    .cal-day.today .day-num { background: var(--accent); color: #fff; }
+    .day-num {
+      font-size: 12px;
+      font-weight: 600;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      margin-bottom: 2px;
+    }
+    .cal-event {
+      font-size: 10px;
+      padding: 2px 5px;
+      border-radius: 3px;
+      color: #fff;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: pointer;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .cal-event.muzika   { background: #b8442a; }
+    .cal-event.festivals{ background: #5e3aa3; }
+    .cal-event.tradicija{ background: #3d6936; }
+    .cal-event.sports   { background: #2a6b85; }
+    .cal-event.maksla   { background: #7a5414; }
+    .cal-event.tirgus   { background: #8c2e2e; }
+    .cal-event.berniem  { background: #a3326b; }
+    .cal-event.teatris  { background: #5a4f2c; }
+    .cal-more { font-size: 9px; color: var(--ink-mute); font-weight: 600; }
+
+    /* MODAL */
+    .modal-backdrop {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.5);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s;
+    }
+    .modal-backdrop.open { opacity: 1; pointer-events: auto; }
+    .modal {
+      background: var(--bg-card);
+      border-radius: 18px;
+      max-width: 560px;
+      width: 100%;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      box-shadow: var(--shadow-lg);
+      transform: scale(.95);
+      transition: transform .2s;
+    }
+    .modal-backdrop.open .modal { transform: scale(1); }
+
+    .modal-cover {
+      height: 140px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 56px;
+      position: relative;
+      border-radius: 18px 18px 0 0;
+    }
+    .modal-cover.muzika   { background: linear-gradient(135deg, #c5654a 0%, #8e2f1d 100%); }
+    .modal-cover.festivals{ background: linear-gradient(135deg, #8966c4 0%, #4a2c80 100%); }
+    .modal-cover.tradicija{ background: linear-gradient(135deg, #6b9962 0%, #2f5526 100%); }
+    .modal-cover.sports   { background: linear-gradient(135deg, #5fa5c8 0%, #1f5b78 100%); }
+    .modal-cover.maksla   { background: linear-gradient(135deg, #d4a04a 0%, #6e4a10 100%); }
+    .modal-cover.tirgus   { background: linear-gradient(135deg, #c25c5c 0%, #7a2424 100%); }
+    .modal-cover.berniem  { background: linear-gradient(135deg, #d670a3 0%, #802b5a 100%); }
+    .modal-cover.teatris  { background: linear-gradient(135deg, #a39068 0%, #4a3f1f 100%); }
+    .modal-close {
+      position: absolute; top: 12px; right: 12px;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(0,0,0,.3);
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: background .15s;
+    }
+    .modal-close:hover { background: rgba(0,0,0,.5); }
+    .modal-body { padding: 24px 28px 28px; }
+    .modal-body h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -.01em;
+      margin-bottom: 12px;
+    }
+    .modal-meta {
+      display: flex; flex-direction: column; gap: 10px;
+      font-size: 14px; color: var(--ink-soft);
+      margin: 16px 0; padding: 14px;
+      background: var(--bg); border-radius: 10px;
+      border: 1px solid var(--line);
+    }
+    .modal-meta-row { display: flex; gap: 10px; align-items: flex-start; }
+    .modal-meta-row .ico { font-size: 16px; width: 20px; flex-shrink: 0; }
+    .modal-meta-row strong { color: var(--ink); font-weight: 600; }
+    .modal-info {
+      font-size: 14px; line-height: 1.6;
+      color: var(--ink-soft);
+      margin-bottom: 20px;
+    }
+    .modal-actions {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      padding-top: 16px; border-top: 1px solid var(--line);
+    }
+    .modal-actions .ticket-btn { flex: 1 1 auto; justify-content: center; padding: 12px 18px; font-size: 14px; }
+
+    /* EMPTY STATE */
+    .empty { text-align: center; padding: 80px 24px; color: var(--ink-mute); }
+    .empty h3 { font-family: 'Fraunces', serif; font-size: 24px; margin-bottom: 8px; color: var(--ink); }
+
+    /* TOAST */
+    .toast {
+      position: fixed; bottom: 20px; left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--ink); color: var(--bg);
+      padding: 12px 20px; border-radius: 10px;
+      font-size: 14px; font-weight: 500;
+      box-shadow: var(--shadow-lg);
+      z-index: 300;
+      transition: transform .25s ease-out;
+      pointer-events: none;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+
+    /* FOOTER */
+    footer {
+      margin-top: 80px;
+      padding: 40px 0 48px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      color: var(--ink-mute);
+      text-align: center;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      header.hero { padding: 48px 0 40px; }
+      .controls { margin-top: -24px; padding: 16px; border-radius: 12px; }
+      .grid { grid-template-columns: 1fr; }
+      .controls-row { gap: 8px; }
+      .search { flex: 1 1 100%; }
+      .view-toggle, select { flex: 1; }
+      .card { padding: 16px; gap: 12px; }
+      .date-badge { width: 52px; padding: 8px 4px; }
+      .date-badge .day { font-size: 22px; }
+      .calendar { padding: 12px; }
+      .cal-day { min-height: 60px; padding: 4px; }
+      .day-num { font-size: 11px; width: 18px; height: 18px; }
+      .cal-event { font-size: 9px; padding: 1px 3px; }
+      .cal-dow { padding: 6px 2px; font-size: 9px; }
+      .modal { border-radius: 14px; }
+      .modal-cover { height: 110px; font-size: 44px; }
+      .modal-body { padding: 18px 20px 22px; }
+      .modal-body h2 { font-size: 22px; }
+    }
+
+    @media print {
+      header.hero, .controls, .months, .fav, footer, .ticket-btn { display: none !important; }
+      .card { break-inside: avoid; box-shadow: none; border-color: #999; }
+      body { background: white; color: black; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-top">
+      <div>
+        <div class="eyebrow">Cēsīs · Cēsu pilsētā · Cēsu novadā</div>
+        <h1>Pasākumi <em>2026</em></h1>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Mainīt režīmu" title="Tumšais režīms">🌓</button>
+    </div>
+    <p class="hero-sub">Viss, kas notiek tuvākajos mēnešos — koncerti, festivāli, tradīcijas, sports. Atrodi savu pasākumu, atzīmē interesantos, pievieno kalendāram un nopērc biļetes vienā klikšķī.</p>
+    <div class="hero-stats">
+      <div class="stat"><div class="num" id="statTotal">—</div><div class="lbl">Pasākumi</div></div>
+      <div class="stat"><div class="num" id="statMonths">4</div><div class="lbl">Mēneši</div></div>
+      <div class="stat"><div class="num" id="statFav">0</div><div class="lbl">Atzīmēti</div></div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="controls">
+    <div class="controls-row">
+      <div class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="search" type="text" placeholder="Meklēt pasākumu, vietu, izpildītāju…" />
+      </div>
+      <div class="view-toggle" role="tablist">
+        <button id="viewList" class="active" data-view="list">☰ Saraksts</button>
+        <button id="viewCalendar" data-view="calendar">▦ Kalendārs</button>
+      </div>
+      <select id="sort" title="Kārtošana">
+        <option value="date-asc">📅 Vecākie pirmie</option>
+        <option value="date-desc">📅 Jaunākie pirmie</option>
+        <option value="name">🔤 Pēc nosaukuma</option>
+      </select>
+      <button class="btn" id="favOnly" title="Rādīt tikai atzīmētos">☆ Atzīmētie</button>
+      <button class="btn" id="resetBtn" title="Notīrīt visus filtrus">↺ Notīrīt</button>
+    </div>
+    <div class="chips" id="categoryChips"></div>
+  </div>
+
+  <div class="months" id="monthTabs"></div>
+
+  <div id="results"></div>
+
+</main>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal" role="document">
+    <div class="modal-cover" id="modalCover"><span id="modalIcon">🎟️</span>
+      <button class="modal-close" id="modalClose" aria-label="Aizvērt">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="tags"><span class="tag" id="modalTag"></span></div>
+      <h2 id="modalTitle"></h2>
+      <div class="modal-meta">
+        <div class="modal-meta-row"><span class="ico">📅</span><div><strong id="modalDate"></strong></div></div>
+        <div class="modal-meta-row"><span class="ico">📍</span><div id="modalLocation"></div></div>
+        <div class="modal-meta-row"><span class="ico">💶</span><div id="modalPrice"></div></div>
+      </div>
+      <p class="modal-info" id="modalInfo"></p>
+      <div class="modal-actions">
+        <a id="modalTicket" class="ticket-btn" target="_blank" rel="noopener">🎟 Biļetes</a>
+        <button class="ticket-btn ghost" id="modalIcs">📅 Kalendārā (.ics)</button>
+        <button class="ticket-btn ghost" id="modalShare">↗ Dalīties</button>
+        <button class="ticket-btn ghost" id="modalFav">☆ Atzīmēt</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<footer>
+  <div class="container">
+    <p>Avoti: <a href="https://pasakumi.cesis.lv/" target="_blank" rel="noopener">pasakumi.cesis.lv</a> · <a href="https://visit.cesis.lv/" target="_blank" rel="noopener">visit.cesis.lv</a> · <a href="https://www.cesukoncertzale.lv/" target="_blank" rel="noopener">Vidzemes Koncertzāle</a> · <a href="https://www.bilesuserviss.lv/" target="_blank" rel="noopener">Biļešu Serviss</a> · <a href="https://www.bilesuparadize.lv/" target="_blank" rel="noopener">Biļešu Paradīze</a></p>
+    <p style="margin-top: 10px;">Pasākumu datumi un detaļas var mainīties. Pirms apmeklējuma pārbaudi oficiālajā lapā.</p>
+    <p style="margin-top: 6px; opacity: .7;">Veidots ar 🧡 Cēsīm · 2026</p>
+  </div>
+</footer>
+
+<script>
+// ===== EVENT DATA =====
+const EVENTS = [
+  // MAIJS 2026
+  { date:"2026-05-04", title:"Valsts svētku koncerts", location:"Vienības laukums, Cēsis", category:"tradicija", price:"Bez maksas", ticketProvider:null, ticketUrl:"https://pasakumi.cesis.lv/", info:"Latvijas Republikas Neatkarības atjaunošanas dienai veltīts koncerts ar Cēsu kolektīviem un viesiem." },
+  { date:"2026-05-10", title:"Motosezonas atklāšana — Ierūcinām Cēsis", location:"Pils parks, Cēsis", category:"tradicija", price:"Bez maksas", ticketProvider:null, ticketUrl:"https://pasakumi.cesis.lv/", info:"Motociklistu sezonas oficiālā atklāšana ar parādi cauri pilsētai un brīvdabas koncertu." },
+  { date:"2026-05-13", title:"Būda mežā — jauniešu izrāde", location:"Vidzemes Koncertzāle Cēsis", category:"teatris", price:"€5–7", ticketProvider:"bilesuserviss", ticketUrl:"https://www.bilesuserviss.lv/lat/promoters-and-salespoints/norisesvietas/vidzemes-koncertzale-cesis-3785/", info:"Jauniešu teātra studijas izrāde. Izrādes notiek 13.–17. maijā vairākos seansos." },
+  { date:"2026-05-16", title:"Andreja Osokina klaviermūzikas kods", location:"Radošais kvartāls Zeit, Līgatne", category:"muzika", price:"€25", ticketProvider:"bilesuparadize", ticketUrl:"https://www.bilesuparadize.lv/", info:"Pianista Andreja Osokina solo koncerts ar klaviermūzikas šedevriem." },
+  { date:"2026-05-16", title:"Baznīcu nakts 2026", location:"Cēsu novada baznīcas", category:"tradicija", price:"Bez maksas", ticketProvider:null, ticketUrl:"https://baznicunakts.lv/", info:"Ikgadējais Baznīcu nakts pasākums — koncerti, ekskursijas un sarunas Cēsu novada dievnamos." },
+  { date:"2026-05-16", title:"Deju pinu vainagā — tautas deju koncerts", location:"Vidzemes Koncertzāle Cēsis", category:"tradicija", price:"€4–5", ticketProvider:"bilesuserviss", ticketUrl:"https://www.bilesuserviss.lv/lat/promoters-and-salespoints/norisesvietas/vidzemes-koncertzale-cesis-3785/", info:"Tautas deju koncerts ar Cēsu novada deju kolektīviem." },
+  { date:"2026-05-22", title:"Zaļumballe ar grupu Zelta Kniede", location:"Cēsis", category:"muzika", price:"€10", ticketProvider:"bilesuserviss", ticketUrl:"https://www.bilesuserviss.lv/lat/biletes/muzika/", info:"Tradicionālā zaļumballe ar dzīvo mūziku un dejām zem klajas debess." },
+  { date:"2026-05-23", title:"Muzeju nakts 2026", location:"Cēsu novada muzeji", category:"maksla", price:"Bez maksas", ticketProvider:null, ticketUrl:"https://muzejunakts.lv/", info:"Ikgadējais Muzeju nakts pasākums — vēlīnās ekskursijas, izstādes un programmas Cēsu, Liepas, Vecpiebalgas un citu novada muzeju krātuvēs." },
+  { date:"2026-05-23", title:"Cēsu Stādu svētki", location:"Cēsu tirgus", category:"tirgus", price:"Bez maksas", ticketProvider:null, ticketUrl:"https://pasakumi.cesis.lv/", info:"Pavasara stādu, dārza preču, mājražojumu un kulinārijas tirgus." },
+  { date:"2026-05-30", title:"Bērnu un jauniešu mākslas festivāls", location:"Rožu laukums, Cēsis", category:"berniem", price:"Bez maksas", ticketProvider:null, ticketUrl:"https://pasakumi.cesis.lv/", info:"Brīvdabas festivāls ģimenēm — radošās darbnīcas, priekšnesumi, izstādes, sacensības." },
+  { date:"2026-05-31", title:"Rīgas iela — vasaras gājēju iela (atklāšana)", location:"Rīgas iela, Cēsis", category:"tradicija", price:"Bez maksas", ticketProvider:null, ticketUrl:"https://visit.cesis.lv/", info:"Rīgas iela kļūst par gājēju ielu līdz 30. augustam — kafejnīcas, ielu mākslinieki un brīvdabas atmosfēra." },
+
+  // JŪNIJS 2026
+  { date:"2026-06-06", title:"Latvijas sieviešu un vīru koru salidojums", location:"Pils parks, Cēsis", category:"muzika", price:"€5", ticketProvider:"bilesuserviss", ticketUrl:"https://www.bilesuserviss.lv/lat/biletes/muzika/", info:"Latvijas sieviešu un vīru koru salidojuma noslēguma koncerts Pils parkā." },
+  { date:"2026-06-07", title:"BERMUDU DIVSTŪRIS — koncerts", location:"Radošais kvartāls Zeit, Līgatne", category:"muzika", price:"€18–25", ticketProvider:"bilesuparadize", ticketUrl:"https://www.bilesuparadize.lv/", info:"Latvijas leģendārās grupas BERMUDU DIVSTŪRIS koncerts atmosfēriskajā Zeit kvartālā." },
+  { date:"2026-06-07", title:"Vaives pagasta svētki", location:"Kaķukrogs, Vaives pagasts", category:"tradicija", price:"Bez maksas", ticketProvider:null, ticketUrl:"https://pasakumi.cesis.lv/", info:"Tradicionālie Vaives pagasta svētki ar koncertu, sportu un ballēm." },
+  { date:"2026-06-13", title:"Alus festivāls Cēsis 2026", location:"Pils laukums, Cēsis", category:"festivals", price:"Ieeja bez maksas", ticketProvider:null, ticketUrl:"https://visit.cesis.lv/", info:"Latvijas amatnieku alus festivāls — degustācijas, ēdiens, dzīvā mūzika." },
+  { date:"2026-06-13", title:"GNC CARFEST — Spēkratu un lidojumu festivāls", location:"Cēsu vecais lidlauks", category:"festivals", price:"No €10", ticketProvider:"bilesuparadize", ticketUrl:"https://www.bilesuparadize.lv/", info:"Spēkratu, lidojumu un mūzikas festivāls ar demonstrācijām, izstādēm un koncertiem." },
+  { date:"2026-06-16", title:"Starptautiskais šaha festivāls Cēsis", location:"Cēsis", category:"sports", price:"Reģistrācija dalībniekiem", ticketProvider:null, ticketUrl:"https://pasakumi.cesis.lv/", info:"16.–21. jūnijs · daudzu nāciju šaha turnīrs ar dažādu līmeņu spēlētājiem." },
+  { date:"2026-06-20", title:"Zāļu tirgus un deju uzvedums", location:"Rožu laukums / Pils parks", category:"tirgus", price:"Bez maksas", ticketProvider:null, ticketUrl:"https://pasakumi.cesis.lv/", info:"Tradicionālais Jāņu zāļu tirgus un Līgo deju uzvedums." },
+  { date:"2026-06-21", title:"Saulgriežu svinēšana", location:"Zanderu kalns, Līgatne", category:"tradicija", price:"Bez maksas", ticketProvider:null, ticketUrl:"https://pasakumi.cesis.lv/", info:"Tradicionālā saulgriežu nakts ar uguns ritu, dziesmām un dejām." },
+  { date:"2026-06-27", title:"Festivāls SaulesBASS 2026", location:"Mākslas telpa MALA, Cēsis", category:"festivals", price:"€15–25", ticketProvider:"bilesuparadize", ticketUrl:"https://www.bilesuparadize.lv/", info:"Alternatīvās un elektroniskās mūzikas festivāls ar Latvijas un ārzemju māksliniekiem." },
+
+  // JŪLIJS 2026
+  { date:"2026-07-03", title:"Hiphopa festivāls Straume", location:"Radošais kvartāls Zeit, Līgatne", category:"festivals", price:"No €20", ticketProvider:"bilesuparadize", ticketUrl:"https://www.straumefest.lv/", info:"3.–4. jūlijs · Latvijas hiphopa festivāls ar lielāko žanra mākslinieku piedalīšanos." },
+  { date:"2026-07-10", title:"Sarunu festivāls Lampa 2026", location:"Cēsu pils parks", category:"festivals", price:"Bez maksas", ticketProvider:null, ticketUrl:"https://festivalslampa.lv/lv/sakums", info:"10.–11. jūlijs · sabiedrisko sarunu festivāls. 2026. gada tēma — “Par ko nedrīkst nerunāt?”." },
+  { date:"2026-07-10", title:"Pārgaujas svētki — Straupei 820", location:"Straupe", category:"tradicija", price:"Bez maksas", ticketProvider:null, ticketUrl:"https://pasakumi.cesis.lv/", info:"10.–12. jūlijs · Straupes 820 gadu jubilejas svētki." },
+  { date:"2026-07-17", title:"Cēsu pilsētas svētki — Cēsīm 820", location:"Cēsu pils parks un pilsētas centrs", category:"tradicija", price:"Lielkoncerts no €7, citi bezmaksas", ticketProvider:"bilesuparadize", ticketUrl:"https://www.eventpartner.lv/lv/kalendars/cesu-svetki", info:"17.–18. jūlijs · Cēsu 820. gadu jubilejas svētki — koncerti Pils parkā, Hanzas tirgus, Fono Cēsis rokfestivāls, gājiens ar lāpām." },
+  { date:"2026-07-17", title:"Hanzas tirgus", location:"Pils dārzs, Cēsis", category:"tirgus", price:"Bez maksas", ticketProvider:null, ticketUrl:"https://pasakumi.cesis.lv/pasakums/hanzas-tirgus/", info:"Viduslaiku amatniecības un ēdienu tirgus Cēsīm 820 ietvaros, Pils dārzā." },
+  { date:"2026-07-17", title:"Fono Cēsis rokfestivāls", location:"Cēsu pils parks", category:"festivals", price:"No €15", ticketProvider:"bilesuparadize", ticketUrl:"https://www.eventpartner.lv/lv/kalendars/cesu-svetki", info:"Rokfestivāls Cēsīm 820 ietvaros — Latvijas un Baltijas rokgrupas." },
+  { date:"2026-07-17", title:"Festivāls LABA DABA 2026", location:"Ratnieki, Līgatnes pagasts", category:"festivals", price:"No €69", ticketProvider:"bilesuparadize", ticketUrl:"https://www.labadaba.lv/biletes", info:"17.–19. jūlijs · starptautiskais mūzikas un mākslas festivāls. 15. reize. Bērni līdz 13 gadiem — bez maksas, kemperu vietas iekļautas." },
+  { date:"2026-07-19", title:"Latvijas Vīndaru svētki", location:"Straupes Zirgu pasts", category:"tirgus", price:"€5", ticketProvider:null, ticketUrl:"https://pasakumi.cesis.lv/", info:"Latvijas mājražoto vīnu un košļātavu festivāls — degustācijas, sarunas, mūzika." },
+  { date:"2026-07-24", title:"Vecpiebalga atver durvis", location:"Vecpiebalga", category:"tradicija", price:"Bez maksas", ticketProvider:null, ticketUrl:"https://pasakumi.cesis.lv/", info:"24.–25. jūlijs · atvērto durvju dienas Vecpiebalgas pagastā — saimniecības, muzeji, darbnīcas." },
+  { date:"2026-07-25", title:"Imantdienas — Imanta Ziedoņa jubileja", location:"Pils parks, Cēsis", category:"maksla", price:"€12–18", ticketProvider:"bilesuparadize", ticketUrl:"https://www.bilesuparadize.lv/lv/event/154454", info:"Dzejnieka Imanta Ziedoņa jubilejai veltīts kultūras pasākums — koncerts, dzejas lasījumi." },
+  { date:"2026-07-25", title:"Marokas garšu festivāls", location:"Rakši Zoo, Cēsu novads", category:"festivals", price:"Ieejas maksa", ticketProvider:null, ticketUrl:"https://pasakumi.cesis.lv/", info:"25.–26. jūlijs · Marokas kultūras, garšu un mūzikas festivāls Rakši Zoo teritorijā." },
+
+  // AUGUSTS 2026
+  { date:"2026-08-01", title:"Gauja Trail UTMB 2026", location:"Cēsis, Līgatne (finišs: Rožu laukums)", category:"sports", price:"Reģistrācijas maksa", ticketProvider:null, ticketUrl:"https://gauja.utmb.world/lv", info:"1.–2. augusts · starptautisks taku skriešanas maratons UTMB sērijas ietvaros." },
+  { date:"2026-08-01", title:"Mājas kafejnīcu dienas Cēsu novadā", location:"Visā Cēsu novadā", category:"tirgus", price:"Dažādi (par ēdienu)", ticketProvider:null, ticketUrl:"https://majaskafejnicas.lv/", info:"1.–2. augusts · mājražotāju un saimniecību kafejnīcu maršruts." },
+  { date:"2026-08-02", title:"Maksims Galkins — Jubilejas tūre", location:"Vidzemes Koncertzāle Cēsis", category:"muzika", price:"No €30", ticketProvider:"bilesuserviss", ticketUrl:"https://www.bilesuserviss.lv/lat/promoters-and-salespoints/norisesvietas/vidzemes-koncertzale-cesis-3785/", info:"Maksima Galkina jubilejas koncerts." },
+  { date:"2026-08-08", title:"Papīrfabrikas festivāls", location:"Līgatnes Papīrfabrika", category:"festivals", price:"€10–20", ticketProvider:"bilesuparadize", ticketUrl:"https://www.facebook.com/papirfabrikasfestivals/", info:"Industriālā mantojuma festivāls Līgatnes vēsturiskajā papīrfabrikā." },
+  { date:"2026-08-08", title:"Cēsu Sporta festivāls un Ghetto Games", location:"Cēsis", category:"sports", price:"Bez maksas", ticketProvider:null, ticketUrl:"https://pasakumi.cesis.lv/", info:"Ielas sporta sacensības un demonstrācijas — basketbols, BMX, skeitbords." },
+];
+
+// ===== CATEGORIES =====
+const CATEGORIES = {
+  muzika:    { label:"Mūzika",     icon:"🎵" },
+  festivals: { label:"Festivāls",  icon:"🎪" },
+  tradicija: { label:"Tradīcijas", icon:"🌿" },
+  sports:    { label:"Sports",     icon:"🏃" },
+  maksla:    { label:"Māksla",     icon:"🎨" },
+  tirgus:    { label:"Tirgus",     icon:"🛍" },
+  berniem:   { label:"Bērniem",    icon:"🧸" },
+  teatris:   { label:"Teātris",    icon:"🎭" },
+};
+
+const MONTH_NAMES = ["Janvāris","Februāris","Marts","Aprīlis","Maijs","Jūnijs","Jūlijs","Augusts","Septembris","Oktobris","Novembris","Decembris"];
+const MONTH_SHORT = ["Jan","Feb","Mar","Apr","Mai","Jūn","Jūl","Aug","Sep","Okt","Nov","Dec"];
+const DOW_SHORT = ["Sv","Pr","Ot","Tr","Ce","Pk","Se"];
+const DOW_CAL = ["Pr","Ot","Tr","Ce","Pk","Se","Sv"];
+
+// ===== STATE =====
+const state = {
+  search: "",
+  category: "all",
+  month: "all",
+  sort: "date-asc",
+  favOnly: false,
+  view: localStorage.getItem("cesis-view") || "list",
+  favorites: new Set(JSON.parse(localStorage.getItem("cesis-favs") || "[]")),
+  theme: localStorage.getItem("cesis-theme") || "light",
+  calendarMonth: null, // YYYY-MM
+};
+
+function saveFavs() { localStorage.setItem("cesis-favs", JSON.stringify([...state.favorites])); }
+
+// ===== HELPERS =====
+function fmtDate(d) {
+  const date = new Date(d + "T00:00:00");
+  return {
+    date,
+    day: date.getDate(),
+    month: MONTH_SHORT[date.getMonth()],
+    monthFull: MONTH_NAMES[date.getMonth()],
+    monthIdx: date.getMonth(),
+    year: date.getFullYear(),
+    dow: DOW_SHORT[date.getDay()],
+    key: `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`,
+    iso: d,
+  };
+}
+
+function providerLabel(p) {
+  if (p === "bilesuserviss") return "Biļešu Serviss";
+  if (p === "bilesuparadize") return "Biļešu Paradīze";
+  return null;
+}
+
+function eventId(e) {
+  return `${e.date}-${e.title}`.replace(/[^a-z0-9]/gi, "-").toLowerCase();
+}
+
+function filtered() {
+  let list = EVENTS.slice();
+  if (state.search.trim()) {
+    const q = state.search.trim().toLowerCase();
+    list = list.filter(e =>
+      e.title.toLowerCase().includes(q) ||
+      e.location.toLowerCase().includes(q) ||
+      (e.info || "").toLowerCase().includes(q)
+    );
+  }
+  if (state.category !== "all") list = list.filter(e => e.category === state.category);
+  if (state.month !== "all") list = list.filter(e => fmtDate(e.date).key === state.month);
+  if (state.favOnly) list = list.filter(e => state.favorites.has(eventId(e)));
+  list.sort((a, b) => {
+    if (state.sort === "date-asc")  return a.date.localeCompare(b.date);
+    if (state.sort === "date-desc") return b.date.localeCompare(a.date);
+    if (state.sort === "name")      return a.title.localeCompare(b.title, "lv");
+    return 0;
+  });
+  return list;
+}
+
+function ticketLabel(provider) {
+  if (provider === "bilesuserviss") return { text: "Biļešu Serviss", cls: "ticket-btn", icon: "🎟" };
+  if (provider === "bilesuparadize") return { text: "Biļešu Paradīze", cls: "ticket-btn secondary", icon: "🎟" };
+  return { text: "Vairāk info", cls: "ticket-btn ghost", icon: "→" };
+}
+
+// ===== TOAST =====
+function toast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => t.classList.remove("show"), 2500);
+}
+
+// ===== ICS EXPORT =====
+function exportICS(e) {
+  const d = fmtDate(e.date);
+  const dt = `${d.year}${String(d.monthIdx + 1).padStart(2, "0")}${String(d.day).padStart(2, "0")}`;
+  const uid = eventId(e) + "@cesis-pasakumi";
+  const nowDate = new Date();
+  const stamp = `${nowDate.getUTCFullYear()}${String(nowDate.getUTCMonth() + 1).padStart(2, "0")}${String(nowDate.getUTCDate()).padStart(2, "0")}T${String(nowDate.getUTCHours()).padStart(2, "0")}${String(nowDate.getUTCMinutes()).padStart(2, "0")}${String(nowDate.getUTCSeconds()).padStart(2, "0")}Z`;
+  const desc = (e.info || "").replace(/\n/g, "\\n");
+  const ics = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Cēsu Pasākumi//LV",
+    "CALSCALE:GREGORIAN",
+    "BEGIN:VEVENT",
+    `UID:${uid}`,
+    `DTSTAMP:${stamp}`,
+    `DTSTART;VALUE=DATE:${dt}`,
+    `SUMMARY:${e.title}`,
+    `LOCATION:${e.location}`,
+    `DESCRIPTION:${desc}\\n\\nBiļetes: ${e.ticketUrl}`,
+    `URL:${e.ticketUrl}`,
+    "END:VEVENT",
+    "END:VCALENDAR",
+  ].join("\r\n");
+
+  const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `${eventId(e)}.ics`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  toast("Pievienots kalendāram — atver lejupielādēto .ics failu");
+}
+
+// ===== SHARE =====
+async function shareEvent(e) {
+  const d = fmtDate(e.date);
+  const text = `${e.title}\n📅 ${d.day}. ${d.monthFull} ${d.year}\n📍 ${e.location}\n${e.ticketUrl}`;
+  if (navigator.share) {
+    try { await navigator.share({ title: e.title, text, url: e.ticketUrl }); return; }
+    catch (err) { if (err.name !== "AbortError") fallbackCopy(text); return; }
+  }
+  fallbackCopy(text);
+}
+function fallbackCopy(text) {
+  navigator.clipboard.writeText(text).then(
+    () => toast("Nokopēts buferī!"),
+    () => toast("Neizdevās nokopēt"),
+  );
+}
+
+// ===== RENDER =====
+function render() {
+  document.getElementById("statTotal").textContent = EVENTS.length;
+  document.getElementById("statFav").textContent = state.favorites.size;
+  const monthsSet = new Set(EVENTS.map(e => fmtDate(e.date).key));
+  document.getElementById("statMonths").textContent = monthsSet.size;
+
+  renderChips();
+  renderMonthTabs();
+
+  document.getElementById("viewList").classList.toggle("active", state.view === "list");
+  document.getElementById("viewCalendar").classList.toggle("active", state.view === "calendar");
+
+  if (state.view === "list") renderList();
+  else renderCalendar();
+}
+
+function renderList() {
+  const list = filtered();
+  const root = document.getElementById("results");
+
+  if (!list.length) {
+    root.innerHTML = `
+      <div class="empty">
+        <h3>Nekas neatbilst</h3>
+        <p>Pamēģini citu filtru kombināciju vai notīri filtrus.</p>
+      </div>`;
+    return;
+  }
+
+  const groups = {};
+  list.forEach(e => {
+    const k = fmtDate(e.date).key;
+    if (!groups[k]) groups[k] = [];
+    groups[k].push(e);
+  });
+
+  const monthKeys = Object.keys(groups).sort(state.sort === "date-desc" ? (a,b)=>b.localeCompare(a) : undefined);
+  root.innerHTML = monthKeys.map(mk => {
+    const s = fmtDate(groups[mk][0].date);
+    return `
+      <section class="month-group" id="m-${mk}">
+        <div class="month-head">
+          <h2>${s.monthFull} ${s.year}</h2>
+          <span class="count">${groups[mk].length} pasākum${groups[mk].length === 1 ? "s" : "i"}</span>
+        </div>
+        <div class="grid">
+          ${groups[mk].map(cardHTML).join("")}
+        </div>
+      </section>`;
+  }).join("");
+
+  root.querySelectorAll(".fav").forEach(btn => {
+    btn.addEventListener("click", (ev) => {
+      ev.stopPropagation();
+      toggleFav(btn.dataset.id);
+    });
+  });
+  root.querySelectorAll(".card").forEach(card => {
+    card.addEventListener("click", () => openModal(card.dataset.id));
+  });
+}
+
+function cardHTML(e) {
+  const d = fmtDate(e.date);
+  const cat = CATEGORIES[e.category] || { label: e.category, icon: "•" };
+  const id = eventId(e);
+  const isFav = state.favorites.has(id);
+  const provider = providerLabel(e.ticketProvider);
+  const isFree = /bez maksas|free/i.test(e.price);
+  const tl = ticketLabel(e.ticketProvider);
+
+  return `
+    <article class="card" data-id="${id}">
+      <button class="fav ${isFav ? "active" : ""}" data-id="${id}" aria-label="Atzīmēt">${isFav ? "★" : "☆"}</button>
+      <div class="date-badge">
+        <div class="month">${d.month}</div>
+        <div class="day">${d.day}</div>
+        <div class="dow">${d.dow}</div>
+      </div>
+      <div class="card-body">
+        <div class="tags"><span class="tag ${e.category}">${cat.icon} ${cat.label}</span></div>
+        <h3>${e.title}</h3>
+        <div class="meta">
+          <span>📍 ${e.location}</span>
+          ${e.info ? `<span style="opacity:.75; flex-basis: 100%; margin-top: 2px;">${e.info.substring(0, 110)}${e.info.length > 110 ? "…" : ""}</span>` : ""}
+        </div>
+        <div class="card-foot">
+          <div class="price ${isFree ? "free" : ""}">
+            <strong>${e.price}</strong>${provider ? ` · ${provider}` : ""}
+          </div>
+          <a class="${tl.cls}" href="${e.ticketUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${tl.icon} ${tl.text}</a>
+        </div>
+      </div>
+    </article>`;
+}
+
+// ===== CALENDAR VIEW =====
+function renderCalendar() {
+  const list = filtered();
+
+  if (!state.calendarMonth) {
+    const keys = [...new Set(EVENTS.map(e => fmtDate(e.date).key))].sort();
+    state.calendarMonth = keys[0];
+  }
+  const [yr, mo] = state.calendarMonth.split("-").map(Number);
+  const monthIdx = mo - 1;
+
+  // events for this month
+  const monthEvents = {};
+  list.forEach(e => {
+    const d = fmtDate(e.date);
+    if (d.year === yr && d.monthIdx === monthIdx) {
+      const k = d.day;
+      if (!monthEvents[k]) monthEvents[k] = [];
+      monthEvents[k].push(e);
+    }
+  });
+
+  // first day
+  const first = new Date(yr, monthIdx, 1);
+  const dayOfWeek = (first.getDay() + 6) % 7; // 0 = Monday
+  const daysInMonth = new Date(yr, monthIdx + 1, 0).getDate();
+
+  const today = new Date();
+  const todayKey = today.getFullYear() === yr && today.getMonth() === monthIdx ? today.getDate() : -1;
+
+  const root = document.getElementById("results");
+
+  let html = `
+    <div class="calendar">
+      <div class="calendar-head">
+        <h2>${MONTH_NAMES[monthIdx]} ${yr}</h2>
+        <div class="calendar-nav">
+          <button id="calPrev" title="Iepriekšējais mēnesis">‹</button>
+          <button id="calToday" title="Šodien">·</button>
+          <button id="calNext" title="Nākamais mēnesis">›</button>
+        </div>
+      </div>
+      <div class="cal-grid">`;
+
+  DOW_CAL.forEach(d => { html += `<div class="cal-dow">${d}</div>`; });
+
+  for (let i = 0; i < dayOfWeek; i++) html += `<div class="cal-day empty"></div>`;
+
+  for (let d = 1; d <= daysInMonth; d++) {
+    const evs = monthEvents[d] || [];
+    const isToday = d === todayKey;
+    html += `<div class="cal-day ${isToday ? "today" : ""}" data-day="${d}">
+      <div class="day-num">${d}</div>`;
+    const shown = evs.slice(0, 3);
+    shown.forEach(e => {
+      html += `<div class="cal-event ${e.category}" data-id="${eventId(e)}" title="${e.title}">${e.title}</div>`;
+    });
+    if (evs.length > 3) {
+      html += `<div class="cal-more">+${evs.length - 3} vēl</div>`;
+    }
+    html += `</div>`;
+  }
+
+  const totalCells = dayOfWeek + daysInMonth;
+  const remaining = (7 - (totalCells % 7)) % 7;
+  for (let i = 0; i < remaining; i++) html += `<div class="cal-day empty"></div>`;
+
+  html += `</div></div>`;
+  root.innerHTML = html;
+
+  // nav
+  document.getElementById("calPrev").addEventListener("click", () => {
+    let m = monthIdx - 1, y = yr;
+    if (m < 0) { m = 11; y--; }
+    state.calendarMonth = `${y}-${String(m + 1).padStart(2, "0")}`;
+    renderCalendar();
+  });
+  document.getElementById("calNext").addEventListener("click", () => {
+    let m = monthIdx + 1, y = yr;
+    if (m > 11) { m = 0; y++; }
+    state.calendarMonth = `${y}-${String(m + 1).padStart(2, "0")}`;
+    renderCalendar();
+  });
+  document.getElementById("calToday").addEventListener("click", () => {
+    const t = new Date();
+    state.calendarMonth = `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, "0")}`;
+    renderCalendar();
+  });
+  root.querySelectorAll(".cal-event").forEach(el => {
+    el.addEventListener("click", () => openModal(el.dataset.id));
+  });
+}
+
+// ===== TOGGLES =====
+function toggleFav(id) {
+  if (state.favorites.has(id)) state.favorites.delete(id);
+  else state.favorites.add(id);
+  saveFavs();
+  render();
+  // update modal button if open
+  const mf = document.getElementById("modalFav");
+  if (mf && mf.dataset.id === id) {
+    const isFav = state.favorites.has(id);
+    mf.textContent = isFav ? "★ Atzīmēts" : "☆ Atzīmēt";
+    mf.classList.toggle("active", isFav);
+  }
+}
+
+// ===== CHIPS =====
+function renderChips() {
+  const wrap = document.getElementById("categoryChips");
+  const counts = {};
+  EVENTS.forEach(e => { counts[e.category] = (counts[e.category] || 0) + 1; });
+  const all = `<button class="chip ${state.category === "all" ? "active" : ""}" data-cat="all">Visi <span class="count">${EVENTS.length}</span></button>`;
+  const cats = Object.keys(CATEGORIES)
+    .filter(k => counts[k])
+    .map(k => `<button class="chip ${state.category === k ? "active" : ""}" data-cat="${k}">${CATEGORIES[k].icon} ${CATEGORIES[k].label} <span class="count">${counts[k]}</span></button>`)
+    .join("");
+  wrap.innerHTML = all + cats;
+  wrap.querySelectorAll(".chip").forEach(btn => {
+    btn.addEventListener("click", () => {
+      state.category = btn.dataset.cat;
+      render();
+    });
+  });
+}
+
+// ===== MONTH TABS =====
+function renderMonthTabs() {
+  const wrap = document.getElementById("monthTabs");
+  const monthsSet = new Set(EVENTS.map(e => fmtDate(e.date).key));
+  const months = [...monthsSet].sort();
+  const all = `<button class="month-tab ${state.month === "all" ? "active" : ""}" data-m="all">Visi mēneši</button>`;
+  const tabs = months.map(m => {
+    const [y, mo] = m.split("-");
+    const idx = parseInt(mo, 10) - 1;
+    const count = EVENTS.filter(e => fmtDate(e.date).key === m).length;
+    return `<button class="month-tab ${state.month === m ? "active" : ""}" data-m="${m}">${MONTH_NAMES[idx]} <span style="opacity:.5; font-weight:400;">${count}</span></button>`;
+  }).join("");
+  wrap.innerHTML = all + tabs;
+  wrap.querySelectorAll(".month-tab").forEach(btn => {
+    btn.addEventListener("click", () => {
+      state.month = btn.dataset.m;
+      // if calendar view: jump to that month
+      if (state.view === "calendar" && btn.dataset.m !== "all") state.calendarMonth = btn.dataset.m;
+      render();
+    });
+  });
+}
+
+// ===== MODAL =====
+function openModal(id) {
+  const e = EVENTS.find(x => eventId(x) === id);
+  if (!e) return;
+  const d = fmtDate(e.date);
+  const cat = CATEGORIES[e.category] || { label: e.category, icon: "•" };
+  const isFav = state.favorites.has(id);
+
+  const modal = document.getElementById("modal");
+  document.getElementById("modalTitle").textContent = e.title;
+  document.getElementById("modalDate").textContent = `${d.day}. ${d.monthFull.toLowerCase()} ${d.year} (${d.dow})`;
+  document.getElementById("modalLocation").innerHTML = `<strong>${e.location}</strong>`;
+  const price = document.getElementById("modalPrice");
+  const provider = providerLabel(e.ticketProvider);
+  price.innerHTML = `<strong>${e.price}</strong>${provider ? `<br><span style="font-size:13px; color:var(--ink-mute);">via ${provider}</span>` : ""}`;
+  document.getElementById("modalInfo").textContent = e.info || "";
+  const tag = document.getElementById("modalTag");
+  tag.className = `tag ${e.category}`;
+  tag.textContent = `${cat.icon} ${cat.label}`;
+  document.getElementById("modalIcon").textContent = cat.icon;
+  const cover = document.getElementById("modalCover");
+  cover.className = `modal-cover ${e.category}`;
+
+  const ticket = document.getElementById("modalTicket");
+  const tl = ticketLabel(e.ticketProvider);
+  ticket.href = e.ticketUrl;
+  ticket.className = tl.cls;
+  ticket.innerHTML = `${tl.icon} ${tl.text}`;
+
+  const fav = document.getElementById("modalFav");
+  fav.textContent = isFav ? "★ Atzīmēts" : "☆ Atzīmēt";
+  fav.classList.toggle("active", isFav);
+  fav.dataset.id = id;
+  fav.onclick = () => toggleFav(id);
+
+  document.getElementById("modalIcs").onclick = () => exportICS(e);
+  document.getElementById("modalShare").onclick = () => shareEvent(e);
+
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+function closeModal() {
+  const modal = document.getElementById("modal");
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+// ===== THEME =====
+function applyTheme() {
+  document.documentElement.setAttribute("data-theme", state.theme);
+  document.getElementById("themeToggle").textContent = state.theme === "dark" ? "☀️" : "🌓";
+}
+
+// ===== EVENT LISTENERS =====
+document.getElementById("search").addEventListener("input", (e) => { state.search = e.target.value; render(); });
+document.getElementById("sort").addEventListener("change", (e) => { state.sort = e.target.value; render(); });
+document.getElementById("favOnly").addEventListener("click", (e) => {
+  state.favOnly = !state.favOnly;
+  e.currentTarget.classList.toggle("active", state.favOnly);
+  e.currentTarget.textContent = state.favOnly ? "★ Atzīmētie" : "☆ Atzīmētie";
+  render();
+});
+document.getElementById("resetBtn").addEventListener("click", () => {
+  state.search = ""; state.category = "all"; state.month = "all"; state.sort = "date-asc"; state.favOnly = false;
+  document.getElementById("search").value = "";
+  document.getElementById("sort").value = "date-asc";
+  const favBtn = document.getElementById("favOnly");
+  favBtn.classList.remove("active");
+  favBtn.textContent = "☆ Atzīmētie";
+  render();
+});
+document.getElementById("viewList").addEventListener("click", () => {
+  state.view = "list";
+  localStorage.setItem("cesis-view", "list");
+  render();
+});
+document.getElementById("viewCalendar").addEventListener("click", () => {
+  state.view = "calendar";
+  localStorage.setItem("cesis-view", "calendar");
+  // sync calendar to month tab if selected
+  if (state.month !== "all") state.calendarMonth = state.month;
+  render();
+});
+document.getElementById("modalClose").addEventListener("click", closeModal);
+document.getElementById("modal").addEventListener("click", (e) => {
+  if (e.target.id === "modal") closeModal();
+});
+document.getElementById("themeToggle").addEventListener("click", () => {
+  state.theme = state.theme === "dark" ? "light" : "dark";
+  localStorage.setItem("cesis-theme", state.theme);
+  applyTheme();
+});
+
+// Keyboard
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeModal();
+  if (e.key === "/" && document.activeElement !== document.getElementById("search")) {
+    e.preventDefault();
+    document.getElementById("search").focus();
+  }
+});
+
+// ===== INIT =====
+applyTheme();
+render();
+</script>
+
+</body>
+</html>
