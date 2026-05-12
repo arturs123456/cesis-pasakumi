@@ -1,0 +1,18 @@
+{
+  "name": "Cēsu Pasākumi 2026",
+  "short_name": "Cēsis 2026",
+  "description": "Pilns Cēsu un Cēsu novada pasākumu katalogs 2026 — koncerti, festivāli, tradīcijas, sports.",
+  "lang": "lv",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fbf7f1",
+  "theme_color": "#b8442a",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
